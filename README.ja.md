@@ -4,6 +4,20 @@
 
 　日本人の名字データベースをTSV形式で作成する。
 
+# 成果物
+
+ファイル|行数|説明
+--------|----|----
+[uniq_yk.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/uniq_yk.tsv)|47594|「読み」と「表記」が1対1である。
+[union_yk.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_yk.tsv)|29318|「読み」と「表記」が1対多である。
+[union_ky.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_ky.tsv)|6388|「表記」と「読み」が1対多である。
+
+# 元データ
+
+ファイル|行数|説明
+--------|----|----
+[surnames.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/surnames.tsv)|47622|「読み」と「表記」が1対1である。手作業でコピペし作成したせいか重複レコードがある。
+
 # 開発環境
 
 * <time datetime="2020-09-11T14:09:50+0900">2020-09-11</time>
@@ -26,10 +40,19 @@ git clone https://github.com/ytyaru/Shell.LastNameTsv.20200911141000
 
 ```sh
 cd Shell.LastNameTsv.20200911141000/src
-./03/uniq.sh
-./03/union_record_yk.sh
-./03/union_record_ky.sh
+./00/uniq_yk.sh
+./01/union_yk.sh
+./02/union_ky.sh
 ```
+
+# 注意
+
+　実行に時間がかかってしまう。
+
+スクリプト|所要時間
+----------|--------
+[union_yk.sh](https://github.com/ytyaru/Shell.LastNameTsv.20200911141000/blob/master/src/01/union_yk.sh)|[46分](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/src/01/note.md)
+[union_ky.sh](https://github.com/ytyaru/Shell.LastNameTsv.20200911141000/blob/master/src/02/union_ky.sh)|[12分](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/src/02/note.md)
 
 # 著者
 

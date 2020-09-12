@@ -4,6 +4,20 @@
 
 Create a Japanese surname database in TSV format.
 
+# Deliverables
+
+File|lines|Description
+----|-----|-----------
+[uniq_yk.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/uniq_yk.tsv)|47594|"Reading" and "notation" are one-to-one.
+[union_yk.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_yk.tsv)|29318|"Reading" and "notation" are one-to-many.
+[union_ky.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_ky.tsv)|6388|"Notation" and "reading" are one-to-many.
+
+# Original data
+
+File|lines|Description
+----|-----|-----------
+[surnames.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/surnames.tsv)|47622|"Reading" and "notation" are one-to-one. There are duplicate records probably because I copied and pasted them by hand.
+
 # Requirement
 
 * <time datetime="2020-09-11T14:09:50+0900">2020-09-11</time>
@@ -26,10 +40,19 @@ git clone https://github.com/ytyaru/Shell.LastNameTsv.20200911141000
 
 ```sh
 cd Shell.LastNameTsv.20200911141000/src
-./03/uniq.sh
-./03/union_record_yk.sh
-./03/union_record_ky.sh
+./00/uniq_yk.sh
+./01/union_yk.sh
+./02/union_ky.sh
 ```
+
+# Note
+
+It takes a long time to execute.
+
+Script|Time required
+------|-------------
+[union_yk.sh](https://github.com/ytyaru/Shell.LastNameTsv.20200911141000/blob/master/src/01/union_yk.sh)|[46 minutes](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/src/01/note.md)
+[union_ky.sh](https://github.com/ytyaru/Shell.LastNameTsv.20200911141000/blob/master/src/02/union_ky.sh)|[12 minutes](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/src/02/note.md)
 
 # Author
 

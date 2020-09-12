@@ -1,20 +1,8 @@
-# 「読み」が同じ行の「表記」を1行カンマ区切り形式にする
+# 失敗。動作しなかった。
 Run() {
 	THIS="$(realpath "${BASH_SOURCE:-0}")"; HERE="$(dirname "$THIS")"; THIS_NAME="$(basename "$THIS")"; APP_ROOT="$(dirname "$HERE")";
-#	export PATH_SURNAMES="$HERE/surnames.tsv"
-	export PATH_SURNAMES="$HERE/test.tsv"
-
-#	YOMI_KAKI=()
-#	DATA="$(cat "$PATH_SURNAMES" | cut -f1 | sort | uniq)"
-#	while read line; do
-#		KAKI="$(cat "$PATH_SURNAMES" | awk -F "\t" '$1 == "'"$line"'" {print $2}' | tr '\n' ',')"
-#		YOMI_KAKI+=( "${line}\t${KAKI%,}" )
-#		echo -e "${line}\t${KAKI%,}"
-#	done <<-END
-#		$DATA
-#	END
-#	RESULT="$(IFS="\n"; echo "${YOMI_KAKI[*]}")"
-#	echo -e "$RESULT" > union_surnames.tsv
+#	export PATH_SURNAMES="$(dirname "$(dirname "$HERE")")/tsv/uniq_yk.tsv"
+	export PATH_SURNAMES="$(dirname "$(dirname "$HERE")")/tsv/test.tsv"
 
 	local YOMI="$(cat "$PATH_SURNAMES" | cut -f1 | sort | uniq)"
 	echo -e "$YOMI"
@@ -26,7 +14,9 @@ Run() {
 #	local CMD="awk -F '\t' '\$1 == "@" {print \$2} | tr '\n' ','"
 #	local CMD="awk -F '\t' '\$1 == "@" {print \$2}' | tr '\n' ','"
 #	local CMD="awk -F '\t' '\$1 == \"@\" {print \$2}' | tr '\n' ','"
-	local CMD="cat $PATH_SURNAMES | awk -F '\t' '\$1 == \"@\" {print \$2}' | tr '\n' ','"
+#	local CMD="cat $PATH_SURNAMES | awk -F '\t' '\$1 == \"@\" {print \$2}' | tr '\n' ','"
+#	local CMD="cat \"$PATH_SURNAMES\" | awk -F '\t' '\$1 == \"@\" {print \$2}' | tr '\n' ','"
+	local CMD="cat \"$PATH_SURNAMES\" | awk -F '\t' '\$1 == \"@\" {print \$2}' | tr '\n' ','"
 	echo "$CMD"
 #	local KAKI="$(echo -e "$YOMI" | xargs -I@ sh -c 'awk -F '\t' '$1 == "@" {print $2}' | tr "\n" ","')"
 #	local KAKI="$(echo -e "$YOMI" | xargs -I@ sh -c "awk -F '\t' '\$1 == "@" {print \$2} | tr '\n' ','")"

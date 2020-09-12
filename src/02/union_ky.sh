@@ -1,8 +1,7 @@
 # 「読み」が同じ行の「表記」を1行カンマ区切り形式にする
 Run() {
 	THIS="$(realpath "${BASH_SOURCE:-0}")"; HERE="$(dirname "$THIS")"; PARENT="$(dirname "$HERE")"; THIS_NAME="$(basename "$THIS")"; APP_ROOT="$(dirname "$HERE")";
-	export PATH_SURNAMES="$PARENT/00/surnames.tsv"
-#	export PATH_SURNAMES="$PARENT/00/test.tsv"
+	export PATH_SURNAMES="$(dirname "$(dirname "$HERE")")/tsv/uniq_yk.tsv"
 
 	KAKI_YOMI=()
 	# 同じ表記で異なる読みが2つ以上存在する表記を取得する
@@ -16,6 +15,6 @@ Run() {
 	END
 
 	RESULT="$(IFS=$'\n'; echo "${KAKI_YOMI[*]}")"
-	echo -e "$RESULT" > union_ky_surnames.tsv
+	echo -e "$RESULT" > union_ky.tsv
 }
 Run "$@"
