@@ -10,7 +10,7 @@
 --------|----|----
 [uniq_yk.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/uniq_yk.tsv)|47594|「読み」と「表記」が1対1である。
 [union_yk.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_yk.tsv)|29318|「読み」と「表記」が1対多である。
-[union_ky.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_ky.tsv)|6388|「表記」と「読み」が1対多である。
+[union_ky.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_ky.tsv)|6388|「表記」と「読み」が1対多である。「読み」が2つ以上ある「表記」のみ対象。
 
 # 元データ
 

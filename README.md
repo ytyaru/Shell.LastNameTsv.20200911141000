@@ -10,7 +10,7 @@ File|lines|Description
 ----|-----|-----------
 [uniq_yk.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/uniq_yk.tsv)|47594|"Reading" and "notation" are one-to-one.
 [union_yk.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_yk.tsv)|29318|"Reading" and "notation" are one-to-many.
-[union_ky.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_ky.tsv)|6388|"Notation" and "reading" are one-to-many.
+[union_ky.tsv](https://raw.githubusercontent.com/ytyaru/Shell.LastNameTsv.20200911141000/master/tsv/union_ky.tsv)|6388|"Notation" and "reading" are one-to-many. Only for "notation" with two or more "readings".
 
 # Original data
 
